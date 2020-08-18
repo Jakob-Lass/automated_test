@@ -86,7 +86,6 @@ before_install:
   - python --version
   - pip install -U pip
   - pip install -U pytest
-  - pip install codecov
 
 script: pytest
 #after_success:
