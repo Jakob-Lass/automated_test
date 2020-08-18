@@ -29,8 +29,3 @@ def test_get_word_lengths():
     assert get_word_lengths(text) == [5, 8, 3, 7, 4, 3, 6]
 
 
-def obscure_function():
-    """
-    Example of a function that is never tested.
-    """
-    do_something_strange()
