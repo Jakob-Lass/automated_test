@@ -29,3 +29,6 @@ def test_get_word_lengths():
     assert get_word_lengths(text) == [5, 8, 3, 7, 4, 3, 6]
 
 
+def test_download():
+    import os
+    assert(os.path.exists(os.path.join('sampedata','camea2018n000495.hdf')))
