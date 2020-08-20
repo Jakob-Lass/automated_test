@@ -68,7 +68,7 @@ matrix:
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
         - wget --no-check-certificate 'https://www.psi.ch/en/media/58366/download'
-        - 7z e o sampedata download
+        - 7z e -o sampedata download
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
     - name: "Python 3.6.8 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -79,7 +79,7 @@ matrix:
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
         - wget --no-check-certificate 'https://www.psi.ch/en/media/58366/download'
-        - 7z e o sampedata download
+        - 7z e -o sampedata download
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     - name: "Python 3.7.9 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -90,7 +90,7 @@ matrix:
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
         - wget --no-check-certificate 'https://www.psi.ch/en/media/58366/download' -
-        - 7z e o sampedata download
+        - 7z e -o sampedata download
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
     - name: "Python 3.8.5 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -101,7 +101,7 @@ matrix:
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
         - wget --no-check-certificate 'https://www.psi.ch/en/media/58366/download' 
-        - 7z e o sampedata download
+        - 7z e -o sampedata download
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 before_install:
   - python --version
