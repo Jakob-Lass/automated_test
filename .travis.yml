@@ -63,7 +63,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download' -UseBasicParsing
+        - wget -o data.zip -UseBasicParsing 'https://www.psi.ch/en/media/58366/download'
         - Expand-Archive data.zip
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
     - name: "Python 3.6.8 on Windows"
@@ -74,7 +74,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download' -UseBasicParsing
+        - wget -o data.zip -UseBasicParsing 'https://www.psi.ch/en/media/58366/download'
         - Expand-Archive data.zip
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     - name: "Python 3.7.9 on Windows"
@@ -85,7 +85,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download' -UseBasicParsing
+        - wget -o data.zip -UseBasicParsing 'https://www.psi.ch/en/media/58366/download' -
         - Expand-Archive data.zip
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
     - name: "Python 3.8.5 on Windows"
@@ -96,7 +96,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download' -UseBasicParsing
+        - wget -o data.zip -UseBasicParsing 'https://www.psi.ch/en/media/58366/download' 
         - Expand-Archive data.zip
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 before_install:
