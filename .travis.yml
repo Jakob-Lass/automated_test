@@ -43,8 +43,8 @@ matrix:
         - python3 --version
         - pip3 install -U pip
         - pip3 install -U pytest
-        - wget -o data.zip -UseBasicParsing 'https://www.psi.ch/en/media/58366/download'
-        - unzip -a data.zip
+        - wget -UseBasicParsing 'https://www.psi.ch/en/media/58366/download'
+        - unzip download
       script: python3 -m pytest
     - name: "Python 3.8.0 on macOS 10.14"
       os: osx
@@ -54,8 +54,8 @@ matrix:
         - python3 --version
         - pip3 install -U pip
         - pip3 install -U pytest
-        - wget -o data.zip -UseBasicParsing 'https://www.psi.ch/en/media/58366/download'
-        - unzip -a data.zip
+        - wget 'https://www.psi.ch/en/media/58366/download'
+        - unzip download
       script: python3 -m pytest
       after_success: python 3 -m codecov
     #  ====== WINDOWS =========
@@ -67,8 +67,8 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download'
-        - Expand-Archive data.zip
+        - wget 'https://www.psi.ch/en/media/58366/download'
+        - Expand-Archive download
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
     - name: "Python 3.6.8 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -78,8 +78,8 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download'
-        - Expand-Archive data.zip
+        - wget 'https://www.psi.ch/en/media/58366/download'
+        - Expand-Archive download
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     - name: "Python 3.7.9 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -89,8 +89,8 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download' -
-        - Expand-Archive data.zip
+        - wget 'https://www.psi.ch/en/media/58366/download' -
+        - Expand-Archive download
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
     - name: "Python 3.8.5 on Windows"
       os: windows           # Windows 10.0.17134 N/A Build 17134
@@ -100,13 +100,15 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
-        - wget -o data.zip 'https://www.psi.ch/en/media/58366/download' 
-        - Expand-Archive data.zip
+        - wget 'https://www.psi.ch/en/media/58366/download' 
+        - Expand-Archive download
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 before_install:
   - python --version
   - pip install -U pip
   - pip install -U pytest
+  - wget 'https://www.psi.ch/en/media/58366/download' 
+  - unzip download
 
 script: pytest
 #after_success:
