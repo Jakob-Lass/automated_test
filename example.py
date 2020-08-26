@@ -32,5 +32,5 @@ def test_get_word_lengths():
 def test_download():
     import os
     print(os.listdir('.'))
-    print(os.listdir('sampledata'))
-    assert(os.path.isfile(os.path.join('sampedata','camea2018n000495.hdf')))
+    print(os.listdir('samlpedata'))
+    assert(os.path.isfile(os.path.join('samlpedata','camea2018n000495.hdf')))
