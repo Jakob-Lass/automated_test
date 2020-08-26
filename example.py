@@ -42,4 +42,4 @@ def test_mpl():
     fig,ax = plt.subplots()
     ax.scatter([0,1,2,3,4],[1,1,1,1,1])
 
-    fig.close()
+    
