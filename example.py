@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def reverse_words(s):
     """
     Reverses order or words in string s.
@@ -34,3 +36,10 @@ def test_download():
     print(os.listdir('.'))
     print(os.listdir('samlpedata'))
     assert(os.path.isfile(os.path.join('samlpedata','camea2018n000495.hdf')))
+
+
+def test_mpl():
+    fig,ax = plt.subfigs()
+    ax.scatter([0,1,2,3,4],[1,1,1,1,1])
+
+    fig.close()

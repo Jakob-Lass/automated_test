@@ -1,6 +1,10 @@
 language: python
 # ===== Linux ======
 dist: xenial
+services:
+  - xvfb
+
+
 python:
   - 2.7
   - 3.5
@@ -43,6 +47,7 @@ matrix:
         - python3 --version
         - pip3 install -U pip
         - pip3 install -U pytest
+        - pip3 install matplotlib
         - wget -UseBasicParsing 'https://www.psi.ch/en/media/60041/download'
         - unzip download
       script: python3 -m pytest
@@ -54,6 +59,7 @@ matrix:
         - python3 --version
         - pip3 install -U pip
         - pip3 install -U pytest
+        - pip3 install matplotlib
         - wget 'https://www.psi.ch/en/media/60041/download'
         - unzip download
       script: python3 -m pytest
@@ -67,6 +73,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
+        - pip3 install matplotlib
         - curl -o download.zip https://www.psi.ch/en/media/60041/download
         - 7z e download.zip "-osamlpedata"
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
@@ -78,6 +85,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
+        - pip3 install matplotlib
         - curl -o download.zip https://www.psi.ch/en/media/60041/download
         - 7z e download.zip "-osamlpedata"
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
@@ -89,6 +97,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
+        - pip3 install matplotlib
         - curl -o download.zip https://www.psi.ch/en/media/60041/download
         - 7z e download.zip "-osamlpedata"
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
@@ -100,6 +109,7 @@ matrix:
         - python --version
         - python -m pip install --upgrade pip
         - pip3 install --upgrade pytest
+        - pip3 install matplotlib
         - curl -o download.zip https://www.psi.ch/en/media/60041/download
         - 7z e download.zip "-osamlpedata"
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
@@ -107,6 +117,7 @@ before_install:
   - python --version
   - pip install -U pip
   - pip install -U pytest
+  - pip install matplotlib
   - wget 'https://www.psi.ch/en/media/60041/download' 
   - unzip download
 
